@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    font-family: 'Hina Mincho', serif;
+    background-color: #f6f6f6;
+}
+
+img{
+    max-width: 100%;
+}
+h2{
+    font-size: 1.6rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #4b0e0c;
+    margin-bottom: 10px;
+
+    &_logo{
+        color: rgb(255, 217, 0);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+    }
+
+    &_search {
+        input[type=text]{
+            padding: 6px;
+            border: none;
+            border-radius: 8px;
+            margin-right: 2px;
+        }
+        input[type=submit]{
+            float: right;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+            background-color: rgb(155, 9, 199);
+        }
+    }
+}
+.wrapper{
+    padding: 0 1rem;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 2rem;
+
+    &_card{
+        text-decoration: none;
+        color: #3d3737;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 3px 6px #d3d3d3;
+
+        &:hover{
+            box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+        }
+    }
+}
+.news-single{
+    background-color: #fff;
+    max-width: 1300px;
+    margin: auto;
+    padding: 2rem;
+}

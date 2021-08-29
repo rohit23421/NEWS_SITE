@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>News from routes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_logo">News Site</div>
+        <%- include('./partials/search.ejs') %>
+    </header>
+
+    <div class="wrapper">
+        <div class="news">
+            <% if(articles != null){ %>
+            <% articles.forEach(function(article, index) {%>
+                <a href="/article/<%- article.id %>" class="news_card">
+                    <img src="<%- article.thumbnail_url %>" alt="<%- article.title.rendered %>">
+                   <h2> <%- article.title.rendered %></h2>
+                   <p><%- article.excerpt.rendered %></p>
+                </a>
+            <% }) %>
+            <% } else { %>
+                    No posts found
+            <% } %>
+        </div>
+    </div>
+    <br><hr><br>
+    <footer>
+        <div class="footer_class">
+            <%- include('./partials/footer.ejs') %>
+        </div>
+    </footer>
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>
